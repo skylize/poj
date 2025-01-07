@@ -183,7 +183,7 @@
                     (filter winning?))]
         (if (= (count us) (count ps))
           (->> us
-               (sort (fn [u (count (:win u))]))
+               (sort (fn [u] (count (:win u))))
                first)
           (assoc t :loss
                  (str "Failed one more attempts to match all at pos "
